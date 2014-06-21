@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	android:id="@+id/widget36"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+<Button
+	android:id="@+id/btnDiv"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="/"
+	android:layout_alignTop="@+id/btnMul"
+	android:layout_toRightOf="@+id/btnMul" />
+<Button
+	android:id="@+id/btnMul"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="x"
+	android:layout_alignTop="@+id/btnRes"
+	android:layout_toRightOf="@+id/btnRes" />
+<Button
+	android:id="@+id/btnRes"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="-"
+	android:layout_alignTop="@+id/btnSum"
+	android:layout_toRightOf="@+id/btnSum" />
+<Button
+	android:id="@+id/btnSum"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="+"
+	android:layout_below="@+id/widget43"
+	android:layout_alignParentLeft="true" />
+<TextView
+	android:id="@+id/widget43"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:text="____________"
+	android:layout_below="@+id/res"
+	android:layout_alignParentLeft="true" />
+<EditText
+	android:id="@+id/res"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:textSize="18sp"
+	android:layout_below="@+id/num2"
+	android:layout_alignParentLeft="true" />
+<EditText
+	android:id="@+id/num2"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:textSize="18sp"
+	android:layout_below="@+id/num1"
+	android:layout_alignParentLeft="true" />
+<EditText
+	android:id="@+id/num1"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:textSize="18sp"
+	android:layout_alignParentTop="true"
+	android:layout_alignParentLeft="true" />
+</RelativeLayout>
