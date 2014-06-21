@@ -8,11 +8,13 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.os.Build;
 
-public class CalculadoraActivity extends ActionBarActivity {
+public class CalculadoraActivity extends ActionBarActivity implements OnClickListener{
 	
 	//variables captura de edicoin de text
 	public String txrNum1;
@@ -39,6 +41,11 @@ public class CalculadoraActivity extends ActionBarActivity {
                     .add(R.id.widget36, new PlaceholderFragment())
                     .commit();
         }
+        
+        btnSum = (Button) findViewById(R.id.btnSum);
+        btnSum.setOnClickListener(this);
+        
+        
     }
 
 
@@ -77,5 +84,29 @@ public class CalculadoraActivity extends ActionBarActivity {
             return rootView;
         }
     }
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		
+		EditText tnum1 = (EditText)findViewById(R.id.num1);
+		EditText tnum2 = (EditText)findViewById(R.id.num2);
+		EditText ViewRes = (EditText)findViewById(R.id.res);
+		
+		num1 = Double.valueOf(tnum1.getText().toString());
+		num2 = Double.valueOf(tnum2.getText().toString());
+		
+		Operaciones op = new Operaciones();
+		String Respuesta = "";
+		
+		if(v.getId() == btnSum.getId()){
+			Respuesta = op.Sumar(num1, num2);
+		}
+		
+		ViewRes.setText(Respuesta);
+		
+		
+		
+	}
 
 }
